@@ -19,4 +19,7 @@ class Doctor
     Appointment.all.select {|appointment| appointment.patient}
   end
 
+  def patients
+    appointment.map{|appointment| appointment.patient}
+
 end
