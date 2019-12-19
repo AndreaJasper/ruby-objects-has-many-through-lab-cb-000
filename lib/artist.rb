@@ -16,10 +16,7 @@ class Artist
   end
 
   def genre
-    songs.smap do |song|
-      if song.artist == self
-        song.genre
-      end
+    songs.map(&:genre)
     end
   end
 
